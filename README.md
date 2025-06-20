@@ -1,8 +1,7 @@
 # Topological-Analysis-of-Multicellular-Patterns
-Código y datos para analizar patrones multicelulares mediante TDA. Se aplica el análisis a datos histológicos de distintos estadios del cáncer para explorar su organización espacial.
+Código y datos para analizar patrones multicelulares mediante TDA. Se estudia la formación de estructuras por adhesión celular y, por separado, se aplica el análisis a datos histológicos de distintos estadios del cáncer para explorar su organización espacial.
 
 ### Objetivos Principales:
-
 1. **Clasificar la disposición espacial** de distintos tipos celulares usando características topológicas extraídas a través del TDA.
 2. **Aplicar TDA a diversos conjuntos de datos**, incluyendo etapas de progresión del cáncer, para investigar cómo la disposición celular en estas etapas se correlaciona con la progresión de la enfermedad.
 
@@ -14,7 +13,7 @@ El pipeline incluye los siguientes pasos:
 - Visualización de los resultados para interpretar las relaciones espaciales entre tipos celulares en diferentes etapas del desarrollo tumoral.
 
 ### Conjuntos de Datos:
-- Datos extraídos de imágenes de cáncer incluyendo carcinoma, displasia y sus respectivas regiones de estroma adyacente.
+- Datos extraídos de imágenes de cáncer incluyendo carcinoma, displasia de alto grado y sus respectivas regiones de estroma adyacente.
 
 ---
 
@@ -22,20 +21,21 @@ El pipeline incluye los siguientes pasos:
 
 El repositorio se organiza en carpetas que agrupan los scripts de análisis y los conjuntos de datos. A continuación se describen las carpetas principales:
 
-#### 📁 `codigos_pablo/`  
-Contiene scripts para el análisis de datos histológicos reales. Estos scripts permiten:
+#### 📁 `analysis_code/`  
+Contiene scripts para el análisis de datos histológicos. Estos scripts permiten:
 - Procesar coordenadas celulares contenidas en archivos `.csv`.  
 - Aplicar TDA a muestras con hasta 18 tipos celulares distintos.  
 - Clasificar la organización espacial de distintas condiciones (carcinoma, displasia y regiones adyacentes).  
 
 Cada subcarpeta también contiene un `README.md` con instrucciones específicas de uso.
 
+#### 📁 Carpeta de datos
+Contiene carpetas con distintos archivos .csv con coordenadas celulares y metadatos por muestra.
 
-#### 📁 `datos_pablo/`  
-Contiene datos derivados de imágenes histológicas:
-- Archivos `.csv` con coordenadas celulares, clasificados por muestra.  
-- Grupos de datos que incluyen carcinoma, displasia y sus zonas adyacentes.  
-- Subcarpetas con los resultados del análisis TDA y clustering para cada conjunto.
+Cada subcarpeta también contiene un `README.md` con información detallada de cada submuestra.
+
+#### 📁 Carpeta de resultados
+Contiene los resultados de cada proceso realizado a cada submuestra.
 
 ---
 
