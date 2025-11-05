@@ -7,13 +7,13 @@ Genera complejos de Rips y diagramas de persistencia para subconjuntos celulares
 
 Ejecución
 ---------
-$ python rips_grupos.py /ruta/a/csvs [--radio 1000] [--workers 2]
+$ python rips_grupos.py /ruta/a/csvs [--radio 2000] [--workers 4]
 
 Argumentos
 ----------
 ruta/a/csvs   : carpeta con archivos .csv con columnas 'X_centroid', 'Y_centroid', 'phenotype_key'
---radio       : radio máximo (max_edge_length) para el complejo de Rips (float, default 1000)
---workers     : núcleos para procesamiento paralelo (int, default = 2)
+--radio       : radio máximo (max_edge_length) para el complejo de Rips (float, default 2000)
+--workers     : núcleos para procesamiento paralelo (int, default = 4)
 
 Salidas
 -------
@@ -134,8 +134,8 @@ def calcular_rips_grupos(ruta_csvs: str, radio: float, n_workers: int):
 def parse_args():
     parser = argparse.ArgumentParser(description="Genera Rips y persistencia por grupo celular desde CSV")
     parser.add_argument("ruta_csvs", type=str, help="Ruta a carpeta con archivos CSV")
-    parser.add_argument("--radio", type=int, default=1000, help="Radio máximo para Rips (default=1000)")
-    parser.add_argument("--workers", type=int, default=2, help="Núcleos para procesamiento paralelo (default=2)")
+    parser.add_argument("--radio", type=int, default=2000, help="Radio máximo para Rips (default=2000)")
+    parser.add_argument("--workers", type=int, default=4, help="Núcleos para procesamiento paralelo (default=4)")
     return parser.parse_args()
 
 if __name__ == "__main__":

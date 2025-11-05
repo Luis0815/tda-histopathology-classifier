@@ -8,7 +8,7 @@ celular** a partir de diagramas de persistencia almacenados en CSV
 
 Ejecución
 ---------
-$ python distancias_grupos.py /ruta/a/diagramas   \
+$ python distancias_por_grupo.py /ruta/a/diagramas   \
                                  [--workers 4]       \
                                  [--bottleneck]
 
